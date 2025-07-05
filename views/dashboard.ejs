@@ -1,0 +1,8 @@
+<h2>Welcome <%= username %></h2>
+<form action="/start" method="post">
+  <input name="BOT_NAME" placeholder="Bot Name" required />
+  <input name="SESSION_ID" placeholder="Session ID" required />
+  <input name="SUDO" placeholder="SUDO" required />
+  <button type="submit">Start Bot</button>
+</form>
+<a href="/logs/<%= username %>">View Logs</a>

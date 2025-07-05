@@ -1,0 +1,6 @@
+<h2>Admin Dashboard</h2>
+<ul>
+  <% users.forEach(user => { %>
+    <li><%= user %> - <a href="/logs/<%= user %>">View Log</a></li>
+  <% }) %>
+</ul>
