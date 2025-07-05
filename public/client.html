@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Live Logs</title></head>
+<body>
+<pre id="logBox">Loading logs...</pre>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io();
+  const logBox = document.getElementById('logBox');
+  const username = window.location.pathname.split('/').pop();
+  socket.emit('join-log', username);
+  socket.on('log', data => {
+    logBox.innerText = data;
+  });
+</script>
+</body>
+</html>
